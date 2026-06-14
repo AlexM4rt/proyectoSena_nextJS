@@ -1,0 +1,559 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <style>
+      .flatpickr-wrapper {
+        flex: 1;
+        display: block;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Hotel Website</title>
+  </head>
+
+  <body>
+    <!-- Aqui viene la barra de accesibilidad -->
+    <nav className="navbar bg-body-tertiary fixed-top">
+      <div
+        className="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <div>
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div>
+          <svg
+            width="183.75"
+            height="56.406"
+            viewBox="0 0 183.75 56.406"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              id="svgGroup"
+              stroke-linecap="round"
+              fill-rule="nonzero"
+              font-size="9pt"
+              stroke="#000000"
+              stroke-width="0.5"
+              fill="#000000"
+              style="stroke: #000000; stroke-width: 0.5; fill: #000000"
+            >
+              <path
+                d="M 32.175 55.5 L 36.375 31.575 L 11.325 31.575 L 7.125 55.5 L 0 55.5 L 9.225 3 L 16.35 3 L 12.375 25.425 L 37.425 25.425 L 41.4 3 L 48.525 3 L 39.3 55.5 L 32.175 55.5 Z M 97.65 23.775 L 98.625 17.925 L 105.525 17.925 L 109.125 5.625 L 114.3 5.625 L 112.125 17.925 L 122.925 17.925 L 121.95 23.775 L 111.075 23.775 L 107.925 42 Q 107.775 42.825 107.7 43.538 Q 107.625 44.25 107.625 44.85 Q 107.625 47.475 109.2 48.938 Q 110.775 50.4 113.325 50.4 Q 115.5 50.4 117 49.763 Q 118.5 49.125 119.7 48.45 L 120.525 54.3 Q 119.1 55.125 116.962 55.763 Q 114.825 56.4 112.2 56.4 Q 109.425 56.4 106.837 55.275 Q 104.25 54.15 102.6 51.713 Q 100.95 49.275 100.95 45.375 Q 100.95 43.725 101.25 41.7 L 104.325 23.775 L 97.65 23.775 Z M 155.4 47.475 L 156 53.475 Q 153.75 54.525 150.3 55.463 Q 146.85 56.4 142.65 56.4 Q 137.7 56.4 133.913 54.263 Q 130.125 52.125 127.987 48.113 Q 125.85 44.1 125.85 38.625 Q 125.85 32.4 128.438 27.15 Q 131.025 21.9 135.788 18.75 Q 140.55 15.6 146.925 15.6 Q 151.275 15.6 154.312 17.25 Q 157.35 18.9 159 21.525 Q 160.65 24.15 160.65 27.15 Q 160.65 31.275 158.7 33.975 Q 156.75 36.675 153.675 38.138 Q 150.6 39.6 147.038 40.2 Q 143.475 40.8 140.25 40.8 Q 138.225 40.8 136.237 40.613 Q 134.25 40.425 132.75 40.2 Q 133.35 45.15 136.275 47.775 Q 139.2 50.4 143.775 50.4 Q 147.525 50.4 150.45 49.425 Q 153.375 48.45 155.4 47.475 Z M 146.4 21.3 Q 142.875 21.3 140.025 23.063 Q 137.175 24.825 135.337 27.863 Q 133.5 30.9 132.9 34.8 Q 134.625 35.1 136.388 35.288 Q 138.15 35.475 140.25 35.475 A 27.71 27.71 0 0 0 148.19 34.494 A 14.266 14.266 0 0 0 150.225 33.712 Q 153.9 31.95 153.9 27.675 Q 153.9 25.05 151.837 23.175 Q 149.775 21.3 146.4 21.3 Z M 180.225 0 L 172.875 42 Q 172.725 42.975 172.65 43.763 Q 172.575 44.55 172.575 45.15 Q 172.575 47.7 174.112 49.125 Q 175.65 50.55 178.2 50.55 Q 179.475 50.55 180.75 50.25 Q 182.025 49.95 183.075 49.425 L 183.75 54.9 Q 182.4 55.575 180.6 55.988 Q 178.8 56.4 176.7 56.4 Q 172.2 56.4 169.013 53.813 Q 165.825 51.225 165.825 45.975 Q 165.825 44.025 166.125 42.15 L 173.475 0 L 180.225 0 Z M 70.275 56.4 Q 64.725 56.4 60.675 54.15 Q 56.625 51.9 54.412 47.888 Q 52.2 43.875 52.2 38.775 Q 52.2 32.25 54.863 27 Q 57.525 21.75 62.325 18.675 Q 67.125 15.6 73.65 15.6 Q 79.2 15.6 83.25 17.85 Q 87.3 20.1 89.512 24.075 Q 91.725 28.05 91.725 33.225 Q 91.725 39.675 89.1 44.963 Q 86.475 50.25 81.637 53.325 Q 76.8 56.4 70.275 56.4 Z M 70.5 50.4 Q 75 50.4 78.187 48.188 Q 81.375 45.975 83.1 42.225 Q 84.825 38.475 84.825 33.825 Q 84.825 30.375 83.475 27.638 Q 82.125 24.9 79.575 23.25 Q 77.025 21.6 73.425 21.6 Q 69 21.6 65.775 23.813 Q 62.55 26.025 60.825 29.775 Q 59.1 33.525 59.1 38.175 Q 59.1 41.55 60.45 44.325 Q 61.8 47.1 64.35 48.75 Q 66.9 50.4 70.5 50.4 Z"
+              />
+            </g>
+          </svg>
+        </div>
+        <div className="d-flex justify-content-evenly align-items-center">
+          <div className="d-flex align-items-center gap-4">
+            <div className="d-flex align-items-center">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#ModalZonaUsuario"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-user-round"
+                >
+                  <circle cx="12" cy="8" r="5" />
+                  <path d="M20 21a8 8 0 0 0-16 0" />
+                </svg>
+              </a>
+            </div>
+
+            <div className="d-flex align-items-center">
+              <a
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#ModalZonGestionarReserva"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-luggage"
+                >
+                  <path
+                    d="M6 20a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2"
+                  />
+                  <path d="M8 18V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v14" />
+                  <path d="M10 20h4" />
+                  <circle cx="16" cy="20" r="2" />
+                  <circle cx="8" cy="20" r="2" />
+                </svg>
+              </a>
+            </div>
+
+            <div className="dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                ES
+              </a>
+              <ul
+                className="dropdown-menu dropdown-menu-end border-0 shadow-sm"
+                style="min-width: auto"
+              >
+                <li>
+                  <a className="dropdown-item text-center" href="#">EN</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="collapse navbar-collapse w-100" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link active" href="#">Nosotros</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Habitaciones</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Aqui vienen fotos del hotel -->
+    <div className="container">
+      <div
+        className="card shadow"
+        style="width: 70%; height: 30%; margin: 10% auto auto auto"
+      >
+        <div
+          id="carouselAutoplaying"
+          className="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <img
+                src="pic1.png"
+                className="d-block w-100 rounded"
+                alt="Vista desde el restaurante"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <a href="#" className="text-decoration-none text-reset"
+                  ><h4>Restaurante buena vista</h4>
+                </a>
+                <p>
+                  Reserva ahora y disfruta de una experiencia culinaria única
+                  con vistas
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img
+                src="pic2.png"
+                className="d-block w-100 rounded"
+                alt="Vista desde la habitación"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <a href="#" className="text-decoration-none text-reset"
+                  ><h4>Habitación matrimonial</h4></a
+                >
+                <p>
+                  Disfruta de una estancia inolvidable con la mejor vista a la
+                  ciudad.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img
+                src="pic3.png"
+                className="d-block w-100 rounded"
+                alt="Vista desde el jardín"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <a href="#" className="text-decoration-none text-reset"
+                  ><h4>Piscina infinita</h4></a
+                >
+                <p>
+                  Sumérgete en nuestra piscina infinita y vuela entre el cielo y
+                  el mar.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <img
+                src="pic4.png"
+                className="d-block w-100 rounded"
+                alt="Vista desde la piscina"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <a href="#" className="text-decoration-none text-reset"
+                  ><h4>El primer hotel de su tipo en el valle de Aburrá</h4></a
+                >
+                <p>
+                  Donde la innovación y el confort se fusionan para brindarte
+                  una estancia inolvidable.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            className="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselAutoplaying"
+            data-bs-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselAutoplaying"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aqui viene el buscador de hotel -->
+    <div className="container" style="margin-top: 2%">
+      <nav className="navbar bg-body-tertiary" style="width: 70%; margin: auto">
+        <div className="container-fluid d-flex justify-content-center">
+          <form className="d-flex" role="search">
+            <button
+              className="btn btn-outline-success"
+              data-bs-toggle="modal"
+              data-bs-target="#ModalCalendario"
+              type="button"
+            >
+              Reserva aqui tu habitacion!
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Aqui vienn los modales  -->
+
+    <!--modal calendario-->
+    <div
+      className="modal fade"
+      id="ModalCalendario"
+      tabindex="-1"
+      aria-labelledby="ModalCalendarioLabel"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h1 className="modal-title fs-5" id="ModalCalendarioLabel">
+              Calendario de reservas
+            </h1>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="modal-body">
+            <div className="input-group d-flex">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Selecciona las fechas"
+                id="calendario-hotel"
+              />
+              <button
+                className="btn btn-outline-secondary"
+                type="button"
+                id="button-addon2"
+              >
+                Buscar
+              </button>
+            </div>
+          </div>
+          <div className="modal-footer">
+            <button type="button" className="btn btn-secondary">
+              reestablecer
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--modal zona usuario-->
+    <div
+      className="modal fade"
+      id="ModalZonaUsuario"
+      tabindex="-1"
+      aria-labelledby="ModalZonaUsuarioLabel"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h1 className="modal-title fs-5" id="ModalZonaUsuarioLabel">
+              Bienvenido a la zona VIP
+            </h1>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="modal-body">
+            <div className="input-group flex-nowrap mb-3">
+              <span className="input-group-text" id="addon-wrapping">@</span>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Usuario o correo"
+                aria-label="Username"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+            <div className="input-group flex-nowrap mb-3">
+              <input
+                type="password"
+                className="form-control"
+                placeholder="contrasena"
+                aria-label="Username"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
+          </div>
+          <div className="modal-footer">
+            <button
+              type="button"
+              className="btn btn-primary"
+              data-bs-dismiss="modal"
+            >
+              inicia sesion
+            </button>
+            <button type="button" className="btn btn-secondary">
+              Registrate
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--modal gestionar reserva-->
+    <div
+      className="modal fade"
+      id="ModalZonGestionarReserva"
+      tabindex="-1"
+      aria-labelledby="ModalZonGestionarReservaLabel"
+      aria-hidden="true"
+    >
+      <div className="modal-dialog">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h1 className="modal-title fs-5" id="ModalZonGestionarReservaLabel">
+              Gestiona tus reservas
+            </h1>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="modal-body">
+            <div className="input-group mb-3">
+              <span className="input-group-text" id="basic-addon1">#</span>
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Numero de reserva"
+                aria-label="NumeroReserva"
+                aria-describedby="basic-addon1"
+              />
+            </div>
+            <div className="input-group">
+              <input
+                type="text"
+                placeholder="Nombre"
+                aria-label="Nombre"
+                className="form-control"
+              />
+              <input
+                type="text"
+                placeholder="Apellido"
+                aria-label="Apellido"
+                className="form-control"
+              />
+            </div>
+          </div>
+          <div className="modal-footer">
+            <button
+              type="button"
+              className="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Buscar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aqui viene informacion general -->
+    <div>
+      <div className="container-fluid">
+        <div>
+          <h1 className="text-center mt-5">Bienvenido a nuestro hotel</h1>
+          <p className="text-center">
+            Aqui encontrás las mejores vistas sin que te cueste un ojo de la
+            cara!
+          </p>
+        </div>
+        <div className="d-flex justify-content-center gap-5 m-5">
+          <div className="card shadow" style="width: 18rem">
+            <img
+              src="PicRom.jpeg"
+              className="card-img-top"
+              alt="Pareja en la piscina"
+            />
+            <div className="card-body">
+              <h5 className="card-title">Escapada romantica</h5>
+              <p className="card-text">
+                Ofertas para parejas los fines de semana
+              </p>
+              <a href="#" className="btn btn-secondary">Descubre las ofertas</a>
+            </div>
+          </div>
+          <div className="card shadow" style="width: 18rem">
+            <img src="PicSol.jpg" className="card-img-top" alt="Dia de sol" />
+            <div className="card-body">
+              <h5 className="card-title">Dia de sol</h5>
+              <p className="card-text">
+                Para toda la familia, con almuerzo incluido
+              </p>
+              <a href="#" className="btn btn-secondary">Descubre las ofertas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EL FOOTER -->
+    <footer
+      className="bg-body-tertiary text-center text-lg-start mt-5 border-top"
+    >
+      <div className="container p-4">
+        <div className="row mt-4">
+          <div className="col-lg-4 col-md-12 mb-4 mb-md-0">
+            <h5 className="text-uppercase fw-bold mb-4">Nuestro Hotel</h5>
+            <p className="text-muted">Hotelazo en Medellin</p>
+          </div>
+
+          <div className="col-lg-4 col-md-6 mb-4 mb-md-0 text-center">
+            <h5 className="text-uppercase fw-bold mb-4">Explora</h5>
+            <ul className="list-unstyled">
+              <li className="mb-2">
+                <a href="#" className="text-secondary text-decoration-none"
+                  >Habitaciones</a
+                >
+              </li>
+              <li className="mb-2">
+                <a href="#" className="text-secondary text-decoration-none"
+                  >Restaurante</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
+            <h5 className="text-uppercase fw-bold mb-4">Contacto</h5>
+            <ul className="list-unstyled text-muted">
+              <li className="mb-2">Medellín, Por las Palmas</li>
+              <li className="mb-2">info@hotel.com</li>
+              <li className="mb-2">+57 300 123 4567</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="text-center p-3 border-top"
+        style="background-color: rgba(0, 0, 0, 0.02)"
+      >
+        <small className="text-muted"> © 2026 Hotelazo </small>
+      </div>
+    </footer>
+
+    <script>
+      flatpickr("#calendario-hotel", {
+        mode: "range",
+        minDate: "today",
+        dateFormat: "d-m-Y",
+        static: true,
+      });
+
+      const menuNavegacion = document.getElementById("navbarNav");
+      const botonMenu = document.querySelector(".navbar-toggler");
+
+      document.addEventListener("click", (e) => {
+        const clicDentro = menuNavegacion.contains(e.target);
+        const clicBoton = botonMenu.contains(e.target);
+        const estaAbierto = menuNavegacion.classList.contains("show");
+
+        if (estaAbierto && !clicDentro && !clicBoton) {
+          const instancia =
+            bootstrap.Collapse.getOrCreateInstance(menuNavegacion);
+          instancia.hide();
+        }
+      });
+    </script>
+  </body>
+</html>
