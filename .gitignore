@@ -1,7 +1,32 @@
+<<<<<<< HEAD
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
+=======
+# ==========================================
+# BACKEND (DJANGO / PYTHON)
+# ==========================================
+*.sqlite3
+db.sqlite3
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+ENV/
+.env
+media/
+*.log
+
+# ==========================================
+# FRONTEND (NEXT.JS / NODE)
+# ==========================================
+# dependencies
+/node_modules
+/frontend/node_modules
+>>>>>>> agrega_backend_django
 /.pnp
 .pnp.*
 .yarn/*
@@ -15,6 +40,10 @@
 
 # next.js
 /.next/
+<<<<<<< HEAD
+=======
+/frontend/.next/
+>>>>>>> agrega_backend_django
 /out/
 
 # production
@@ -22,6 +51,10 @@
 
 # misc
 .DS_Store
+<<<<<<< HEAD
+=======
+Thumbs.db
+>>>>>>> agrega_backend_django
 *.pem
 
 # debug
@@ -30,7 +63,11 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+<<<<<<< HEAD
 # env files (can opt-in for committing if needed)
+=======
+# env files
+>>>>>>> agrega_backend_django
 .env*
 
 # vercel
@@ -39,3 +76,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+<<<<<<< HEAD
+=======
+
+# IDEs / Editores
+.vscode/
+.idea/
+>>>>>>> agrega_backend_django
